@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+:root {
+  --background--color: #013243;
+  --backgroung--color--white: #ffffff;
+  --text--color--white: #ffffff;
+  --text--color--black: #000000;
+  --text--color--primary: #86bfd3;
+  --border--color: #bcbcbc;
+  --placeholder--text--color: #8d8d8d;
+
+  --container--width--sm: 100%;
+  --container--width--md: 65%;
+  --container--width--lg: 75%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+form {
+  font-style: inherit;
+}
+
+.container {
+  width: var(--container--width--sm);
+}
+
+.container__upper {
+  background-image: url(assets/iPhone\ Mockup.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 400px;
+  text-align: center;
+  background-color: var(--background--color);
+  color: var(--backgroung--color--white);
+  width: 100%;
+  height: 500px;
+}
+
+.container__upper h1 {
+  padding-top: 40px;
+}
+
+.container__upper p {
+  color: var(--text--color--primary);
+}
+
+.container__upper__image {
+  width: 100px;
+}
+
+.container__bottom {
+  padding: 40px;
+  border: 1px solid var(--border--color);
+}
+
+.container__bottom h2 {
+  font-weight: 900;
+}
+
+.form__label {
+  font-weight: 700;
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  background-color: var(--backgroung--color--white);
+  color: var(--placeholder--text--color);
+  padding: 15px;
+  border: 1px solid var(--border--color);
+  border-radius: 5px;
+  margin: 6px 0;
+}
+
+.form__tandc__container {
+  margin-top: 1rem;
+  display: flex;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+.form__input__checkbox {
+  /* border: 0.5px solid var(--border--color); */
+  align-self: flex-start;
+  margin-top: 0.32em;
+  padding: 60px;
+  background-color: var(--backgroung--color--white);
+  margin-right: 1rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  border-radius: 1.25rem;
+}
+
+input[type='checkbox'] {
+  border: 1px solid var(--border--color) !important;
+}
+
+.form__tandc {
+  max-width: 230px;
+  word-spacing: 2px;
+}
+
+.tandc__link {
+  color: var(--background--color);
+  font-weight: 700;
+}
+
+.form__button {
+  letter-spacing: 0.5px;
+  padding: 15px;
+  background-color: var(--background--color);
+  color: var(--backgroung--color--white);
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+  border-style: none;
+  font-weight: 700;
+}
+
+.form__button:hover {
+  transform: scale(1.01);
+}
+
+@media screen and (min-width: 481px) {
+  body {
+    background-image: url(assets/Background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .container {
+    width: var(--container--width--md);
+    margin: 70px auto;
+    background-color: var(--backgroung--color--white);
+    border-radius: 0 0 5px 5px;
+  }
+
+  .container__upper__image {
+    width: 80%;
+  }
+  .container__bottom {
+    border-radius: 0 0 5px 5px;
+  }
+  .container__upper__image {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    width: var(--container--width--lg);
+    margin: 70px auto;
+    background-color: var(--backgroung--color--white);
+    border-radius: 5px; /* topleft, topright, bottomright & bottomleft  0 5px*/
+  }
+
+  .container__upper__image {
+    width: 500px;
+    height: 500px;
+  }
+
+  .container__upper {
+    flex-basis: 50%;
+    border-radius: 5px 0 0 5px;
+  }
+  .container__bottom {
+    flex-basis: 50%;
+    border-radius: 0 5px 5px 0;
+  }
+}
